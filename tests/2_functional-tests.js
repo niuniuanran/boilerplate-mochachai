@@ -196,7 +196,7 @@ suite("Functional Tests", function() {
 
     // On Gomix we'll use this setting
     /** ### Copy your project's url here  ### **/
-    Browser.site = "localhost:3000";
+    Browser.site = "https://unruly-marmalade-dewberry.glitch.me/";
 
     // If you are testing on a local environment replace the line above  with
     // Browser.localhost('example.com', (process.env.PORT || 3000));
@@ -243,11 +243,11 @@ suite("Functional Tests", function() {
                     // assert that status is OK 200
                     browser.assert.success();
                     // assert that the text inside the element 'span#name' is 'Marco'
-                    browser.assert.text("span#name", "Marco");
+                    browser.assert.text('span#name', "Marco");
                     // assert that the text inside the element 'span#surname' is 'Polo'
-                    browser.assert.text("span#surname", "Polo");
+                    browser.assert.text('span#surname', "Polo");
                     // assert that the element(s) 'span#dates' exist and their count is 1
-                    browser.assert.element("span#dates", 1);
+                    browser.assert.element('span#dates', 1);
 
                     done(); // It's an async test, so we have to call 'done()''
                 });
@@ -270,11 +270,11 @@ suite("Functional Tests", function() {
                     // pressButton is Async.  Waits for the ajax call to complete...
                     browser.assert.success();
                     // assert that status is OK 200
-                    browser.assert.text("span#name", "Cristoforo");
+                    browser.assert.text('span#name', 'Cristoforo');
                     // assert that the text inside the element 'span#name' is 'Cristoforo'
-                    browser.assert.text("span#surname", "Colombo");
+                    browser.assert.text('span#surname', 'Colombo');
                     // assert that the text inside the element 'span#surname' is 'Colombo'
-                    browser.assert.element("span#dates", 1);
+                    browser.assert.element('span#dates', 1);
                     // assert that the element(s) 'span#dates' exist and their count is 1
 
                     done(); // It's an async test, so we have to call 'done()''
@@ -286,9 +286,9 @@ suite("Functional Tests", function() {
             test('submit "surname" : "Vespucci" - write your e2e test...', function(done) {
                 browser.fill("surname", "Vespucci").pressButton("submit", function() {
                     browser.assert.success();
-                    browser.assert.text("span#name", "Amerigo");
-                    browser.assert.text("span#surname", "Vespucci");
-                    browser.assert.element("span#dates", 1);
+                    browser.assert.text('span#name', 'Amerigo');
+                    browser.assert.text('span#surname', 'Vespucci');
+                    browser.assert.element('span#dates', 1);
                     done();
                 });
                 // fill the form, and submit.
